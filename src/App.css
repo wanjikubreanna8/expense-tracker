@@ -1,0 +1,333 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+h2 {
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.search-container {
+  margin: 20px 0;
+  position: relative;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 20px;
+  padding-left: 40px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.2);
+}
+
+.search-container::before {
+  content: "🔍";
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.form-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+  box-shadow: var(--box-shadow);
+  border-top: 4px solid var(--secondary-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.2);
+}
+
+button {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(94, 53, 177, 0.3);
+}
+
+.expenses-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border-top: 4px solid var(--accent-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+th:first-child {
+  border-top-left-radius: var(--border-radius);
+}
+
+th:last-child {
+  border-top-right-radius: var(--border-radius);
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: var(--dark-color);
+}
+
+tr:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+tr:hover {
+  background-color: rgba(94, 53, 177, 0.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .form-container, .expenses-container {
+    padding: 15px;
+  }
+}
+
+/* Animation for new expense */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+tr {
+  animation: fadeIn 0.5s ease-out;
+}
+/* Add these styles to your existing CSS */
+
+.sortable-header {
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+  user-select: none;
+}
+
+.sortable-header:hover {
+  background-color: rgba(67, 97, 238, 0.1);
+}
+
+.delete-btn {
+  background-color: #f72585;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  margin: 2px 0;
+}
+
+.delete-btn:hover {
+  background-color: #d31665;
+  transform: scale(1.05);
+}
+
+.delete-confirm {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+  margin-top: 5px;
+  width: 150px;
+}
+
+.delete-confirm p {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+  font-size: 14px;
+}
+
+.delete-confirm div {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.delete-confirm button {
+  width: auto;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.delete-confirm button:first-child {
+  background-color: var(--warning-color);
+}
+
+.delete-confirm button:last-child {
+  background-color: var(--success-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .delete-confirm {
+    position: static;
+    margin-top: 10px;
+  }
+  
+  .expenses-table td:nth-child(5),
+  .expenses-table th:nth-child(5) {
+    position: relative;
+  }
+}
